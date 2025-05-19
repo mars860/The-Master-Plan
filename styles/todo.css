@@ -1,0 +1,172 @@
+
+
+
+.list-container::-webkit-scrollbar {
+    width: 8px;
+}
+.list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+.container {
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 100px;
+    width: 800px;
+}
+.table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    border-collapse: collapse;
+}
+.table th, .table td {
+    border: none !important;
+}
+.todo-header-wrapper {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: -100px;
+}
+.todo-header-wrapper img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    z-index: 101;
+}
+.todo-header-wrapper h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 102;
+    margin: 0;
+}
+.btn {
+    background-color: #C2FFF6;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+    background-color: rgb(130, 200, 188);
+}
+.card {
+    padding-top: 0px;
+    border-radius: 25px;
+}
+.card-header-black {
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px 25px 0 0;
+    margin: 0 -20px -10px -20px;
+}
+
+
+
+.todo-table-header th {
+    background-color: #5BFFE6 !important;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .todo-header-wrapper img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .todo-header-wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .todo-header-wrapper h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Hide table headers on small screens */
+    .table thead {
+        display: none;
+    }
+
+    /* Make table rows block elements */
+    .table, .table tbody, .table tr, .table td, .table th {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #C2FFF6;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none !important;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Add labels before each cell content */
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        color: #000;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
